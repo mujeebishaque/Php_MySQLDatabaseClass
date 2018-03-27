@@ -5,7 +5,7 @@ database connection, performing query and closing connection.
 
 ```php
 <?php
-	$mysql = new MySQLDatabase("localhost", "root", "", "database");
+  $mysql = new MySQLDatabase("localhost", "root", "", "database");
   $mysql->perform_query("INSERT INTO user_detail(username, password) VALUES ('Abraham', 875)");
   $mysql->close_connection();
 ?>
