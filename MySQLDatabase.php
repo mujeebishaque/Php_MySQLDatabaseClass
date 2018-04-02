@@ -24,7 +24,7 @@
   		}
   		public function perform_query ( $sql )  {
   			$query = mysqli_real_escape_string ($this->connection, $sql );
-        $result = mysqli_query($this->connection, $query);
+        		$result = mysqli_query($this->connection, $query);
   			if ( ! $result )  {
   				die("ERROR: Database Query Failed !");
   			}	
@@ -37,6 +37,7 @@
   		}
 	}
 
-	$mysql = new MySQLDatabase("localhost", "root", "", "fast");
+  $mysql = new MySQLDatabase("localhost", "root", "", "fast");
   $mysql->perform_query("INSERT INTO user_detail(username, password) VALUES ('Abraham', 875)");
   $mysql->close_connection();
+
